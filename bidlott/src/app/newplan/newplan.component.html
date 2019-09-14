@@ -1,0 +1,13 @@
+<form #m1="ngForm">
+    <input type=text name="title" [(ngModel)]="f.title" placeholder="Title"><br>
+    <input type=number name="duration"[(ngModel)]="f.duration" placeholder="Duration"><br>
+    <input type=number name="amount"[(ngModel)]="f.amount" placeholder="Per Month Amount"><br>
+    <input type=number name="interest"[(ngModel)]="f.interest" placeholder="Min.InterestRate"><br>
+
+<input type='submit' (click)="create() " value='Submit'>
+
+<router-outlet></router-outlet>
+
+
+
+</form>
