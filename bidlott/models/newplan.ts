@@ -4,5 +4,7 @@ export class newplan
     duration:number;
     amount:number;
     interest:number;
-
+  date;
+  masterPlanId;
+    
 }

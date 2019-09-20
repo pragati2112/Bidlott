@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ServerService } from '../server.service';
 import { admin } from 'models/admin';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -9,21 +10,25 @@ import { admin } from 'models/admin';
 })
 export class LoginComponent implements OnInit {
 t= new admin();
-  constructor(private ds:ServerService) { }
+d;
+  constructor(private ds:ServerService ,private route:Router) { }
 
   ngOnInit() {
   }
 
   login(t)
   {
-    return this.ds.verifyadmin(this.t).subscribe((data)=>{
-
-        if(data.status=="ok")
+     this.ds.verifyadmin(this.t).subscribe((data)=>{
+       this.d=data;
+      //  alert(JSON.stringify(data));
+       console.log(this.d);
+        if(this.d.status=="ok")
         {
+          this.route.navigate(['/dashboard']);
         console.log("hy");
         }
         else{
-          console.log("no");
+          console.log("no");  
         }
     })
   }

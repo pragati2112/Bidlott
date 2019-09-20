@@ -16,9 +16,9 @@ f=new newplan();
   }
 
 create()
-{ alert("create");
+{
   return this.ds.createplan(this.f).subscribe((d)=>{
-    alert(JSON.stringify(d));
+    
 
     this.router.navigate(['/dashboard/listofplans']);
 

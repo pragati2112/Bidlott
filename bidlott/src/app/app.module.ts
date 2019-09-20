@@ -11,6 +11,9 @@ import { NewplanComponent } from './newplan/newplan.component';
 import { HttpClientModule } from '@angular/common/http';
 import {FormsModule } from '@angular/forms';
 import { ListofplansComponent } from './listofplans/listofplans.component';
+import { SignupComponent } from './signup/signup.component';
+import { UserdashboardComponent } from './userdashboard/userdashboard.component';
+import { MysocityComponent } from './mysocity/mysocity.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +24,9 @@ import { ListofplansComponent } from './listofplans/listofplans.component';
     LoginComponent,
     NewplanComponent,
     ListofplansComponent,
+    SignupComponent,
+    UserdashboardComponent,
+    MysocityComponent,
  
   ],
   imports: [

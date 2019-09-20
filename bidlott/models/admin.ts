@@ -1,5 +1,8 @@
 export class admin
 {
     email:string;
-    password:any;
+    password:string;
+    name:string;
+    phonenumber:number;
+    role;
 }
